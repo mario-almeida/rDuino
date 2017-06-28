@@ -37,7 +37,7 @@
 #define NETWORKID     250                //the same on all nodes that talk to each other including this node and the gateway
 #define FREQUENCY     RF69_868MHZ        //others: RF69_433MHZ, RF69_868MHZ (this must match the RFM69 freq you have on your Moteino)
 #define IS_RFM69HW                       //uncomment only for RFM69HW! Remove/comment if you have RFM69W!
-#define ENCRYPTKEY    "16Nov1980@8PMgoa" //exactly the same 16 characters/bytes on all nodes!
+#define ENCRYPTKEY    "sampleEncryptKey" //exactly the same 16 characters/bytes on all nodes!
 #define ENABLE_ATC                       //comment out this line to disable AUTO TRANSMISSION CONTROL
 #define ATC_RSSI      -80
 #define ACK_TIME      50                 // max # of ms to wait for an ack
