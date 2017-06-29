@@ -32,3 +32,4 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 - Raspberrypi Team @ https://www.raspberrypi.org
 - MOSQUITTO Team @ http://mosquitto.org
 - OpenHAB2 Team @ http://www.openhab.org/
+- Emoncms Team @ https://emoncms.org/
