@@ -12,8 +12,8 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 	- Moteino (https://lowpowerlab.com/shop/)
 - **Radio** :
 	- RFM69HW
-		(http://www.hoperf.com/rf_transceiver/modules/RFM69W.html)
-		(https://lowpowerlab.com/shop/)
+	* (http://www.hoperf.com/rf_transceiver/modules/RFM69W.html),
+	* (https://lowpowerlab.com/shop/)
 
 ### Software/Libraries
 - Raspberrypi (https://www.raspberrypi.org/downloads/)
