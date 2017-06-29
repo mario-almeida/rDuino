@@ -4,9 +4,9 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 
 ### Hardware
 
-**Gateway** : Raspberrypi, Arduino UNO R3
-**Nodes** : Arduino NANO, Moteino
-**Radio** : RFM69HW
+- **Gateway** : Raspberrypi, Arduino UNO R3
+- **Nodes** : Arduino NANO, Moteino
+- **Radio** : RFM69HW
 
 ### Software/Libraries
 - Raspberrypi (https://www.raspberrypi.org/downloads/)
