@@ -43,6 +43,7 @@
 #define ACK_TIME      50                 // max # of ms to wait for an ack
 //*********************************************************************************************
 #define SERIAL_EN         // uncomment if you want serial debugging output
+#define BUZZER_SENS       // uncomment to enable buzzer
 //*********************************************************************************************
 #ifdef __AVR_ATmega1284P__
 #define LED           15                        // Moteino MEGAs have LEDs on D15
@@ -72,6 +73,7 @@ float diff;
 byte sendLen;
 String sendData;
 
+
 /************************************************************************************
   MQ-2 Gas Sensor Sandbox Electronics    2011-04-25
 ************************************************************************************/
@@ -81,6 +83,10 @@ String sendData;
 #define         RL_VALUE                     (1)     //define the load resistance on the board, in kilo ohms
 #define         RO_CLEAN_AIR_FACTOR          (9.83)  //RO_CLEAR_AIR_FACTOR=(Sensor resistance in clean air)/RO,
                                                      //which is derived from the chart in datasheet
+#ifdef BUZZER_SENS
+#define         BUZZER_PIN                    4
+byte            buzzerTrigVal = 5;
+#endif
 
 /***********************Software Related Macros************************************/
 #define         CALIBARAION_SAMPLE_TIMES     (50)    //define how many samples you are going to take in the calibration phase
@@ -159,6 +165,7 @@ void setup() {
 }
 
 void loop() {
+  
   sendData = "";
   delay(50);
 
@@ -207,6 +214,11 @@ void loop() {
     prevSMOKE = SMOKE;
   }
 
+#ifdef BUZZER_SENS
+  if(SMOKE >= buzzerTrigVal || CO >= buzzerTrigVal || LPG >= buzzerTrigVal)
+    Beep(25, true);
+#endif
+  
   /********************************************************************************************
    *********** Sending Data To Gateway Node                                       *************
    ********************************************************************************************/
@@ -219,7 +231,7 @@ void loop() {
   }
 
   SERIALFLUSH();
-  delay(200);
+  delay(150);
 }
 
 /*
@@ -319,3 +331,18 @@ int MQGetGasPercentage(float rs_ro_ratio, int gas_id) {
 int  MQGetPercentage(float rs_ro_ratio, float *pcurve) {
   return (pow(10, ( ((log(rs_ro_ratio) - pcurve[1]) / pcurve[2]) + pcurve[0])));
 }
+
+#ifdef BUZZER_SENS
+void Beep(byte theDelay, boolean both) {
+  if (theDelay > 30) theDelay = 30;
+  tone(BUZZER_PIN, 1000);
+  delay(theDelay);
+  noTone(BUZZER_PIN);
+  
+  if (both) {
+    tone(BUZZER_PIN, 1500);
+    delay(theDelay);
+    noTone(BUZZER_PIN);
+  }
+}
+#endif
