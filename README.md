@@ -22,8 +22,8 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 - Emoncms (https://github.com/emoncms/emoncms)
 - OpenHAB2 (http://www.openhab.org/downloads.html)
 	   (http://www.myopenhab.org/)
-
-## Node:-
+____
+## Note:-
 	This project include codes from different source and modified as per the project needs
 
 ## THANKYOU
