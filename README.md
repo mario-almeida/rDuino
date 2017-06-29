@@ -9,7 +9,7 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 	- Arduino UNO R3 (https://store.arduino.cc/usa/)
 - **Nodes** :
 	- Arduino NANO (https://store.arduino.cc/usa/)
-	- Moteino (https://lowpowerlab.com/shop/)
+	- Moteino R4 (https://lowpowerlab.com/shop/)
 - **Radio** :
 	- RFM69HW
 	* (http://www.hoperf.com/rf_transceiver/modules/RFM69W.html),
@@ -33,3 +33,4 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 - MOSQUITTO Team @ http://mosquitto.org
 - OpenHAB2 Team @ http://www.openhab.org/
 - Emoncms Team @ https://emoncms.org/
+- Sandbox Electronics @ http://sandboxelectronics.com
