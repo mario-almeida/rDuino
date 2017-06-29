@@ -5,15 +5,15 @@ This project consist of Arduino, mosquitto, OpenHAB2 and Emoncms
 ### Hardware
 
 - **Gateway** : 
-		+ Raspberrypi (https://www.raspberrypi.org/products/)
-		+ Arduino UNO R3 (https://store.arduino.cc/usa/)
+	- Raspberrypi (https://www.raspberrypi.org/products/)
+	- Arduino UNO R3 (https://store.arduino.cc/usa/)
 - **Nodes** :
-		- Arduino NANO (https://store.arduino.cc/usa/)
-		- Moteino (https://lowpowerlab.com/shop/)
+	- Arduino NANO (https://store.arduino.cc/usa/)
+	- Moteino (https://lowpowerlab.com/shop/)
 - **Radio** :
-		- RFM69HW
-			- (http://www.hoperf.com/rf_transceiver/modules/RFM69W.html)
-			- (https://lowpowerlab.com/shop/)
+	- RFM69HW
+		(http://www.hoperf.com/rf_transceiver/modules/RFM69W.html)
+		(https://lowpowerlab.com/shop/)
 
 ### Software/Libraries
 - Raspberrypi (https://www.raspberrypi.org/downloads/)
