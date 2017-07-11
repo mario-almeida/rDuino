@@ -190,7 +190,9 @@ void loop() {
 
   SERIALFLUSH();
 
+#ifdef MOTION_SENS
   sleepNow();
+#endif
 }
 
 /*
@@ -199,7 +201,7 @@ void loop() {
 void txRadio(const char * buff) {
   digitalWrite(LED, HIGH);
   sendLen = strlen(buff);
-  radio.sendWithRetry(GATEWAYID, buff, sendLen, 2);
+  radio.sendWithRetry(GATEWAYID, buff, sendLen);
   digitalWrite(LED, LOW);
 }
 
